@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %} 
+       
+{% endblock  %}
+
+{% block content %}
+
+<h2>
+{% if  form.instance.pk %}
+edit tak
+{% else %}
+create Task
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Create Task</button>
+    </form>
+   
+</h2>
+
+
+
+
+
+
+
+
+  
+            
+     
+
+
+{% endblock  %}
